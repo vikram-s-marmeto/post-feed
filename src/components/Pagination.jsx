@@ -18,7 +18,7 @@ const Pagination = ({ totalPosts }) => {
   };
 
   return (
-    <div className='mt-6 flex justify-center space-x-2'>
+    <div className='mt-6 mb-4 flex justify-center space-x-2'>
       {/* Previous Button */}
       <button
         className='cursor-pointer rounded border border-gray-400 px-4 py-1 text-gray-800 disabled:cursor-not-allowed disabled:opacity-40 hover:disabled:bg-none dark:border-gray-200/20 dark:text-gray-200 dark:hover:border-gray-200/40'
