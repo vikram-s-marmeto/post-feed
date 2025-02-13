@@ -1,4 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "routes": [{ "src": "/:match*", "dest": "/:match*" }]
+  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
 }
