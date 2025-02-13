@@ -8,19 +8,18 @@ export const ThemeProvider = ({ children }) => {
 
   function toggleTheme() {
     setLight((prev) => {
-      localStorage.setItem("post-feed-color-scheme", !prev);
-      return !prev;
+      const newTheme = !prev;
+      localStorage.setItem("post-feed-color-scheme", newTheme);
+      return newTheme;
     });
   }
 
   useEffect(() => {
-    let theme = localStorage.getItem("post-feed-color-scheme");
-    if (theme) {
-      setLight(theme === "light");
+    const storedTheme = localStorage.getItem("post-feed-color-scheme");
+    if (storedTheme !== null) {
+      setLight(storedTheme === "true");
     } else {
-      if (!window.matchMedia) return;
-
-      setLight(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      setLight(window.matchMedia("(prefers-color-scheme: light)").matches);
     }
   }, []);
 
@@ -52,7 +51,7 @@ export const ThemeToggle = (props) => {
       {!isLight ? (
         <FaMoon className='size-4.5 text-gray-200 md:size-5' />
       ) : (
-        <FaSun class='size-4.5 text-gray-800 md:size-5' />
+        <FaSun className='size-4.5 text-gray-800 md:size-5' />
       )}
     </button>
   );

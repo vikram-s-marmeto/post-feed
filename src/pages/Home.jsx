@@ -3,12 +3,20 @@ import { useParams, useNavigate } from "react-router-dom";
 import { usePostContext } from "../context/PostContext";
 import { ThemeToggle } from "../context/ThemeContext";
 import { PostCard, Pagination, Searchbar, ScrollToTop } from "../components";
+import PostSkeleton from "../components/PostSkeleton";
 
 const POSTS_PER_PAGE = 5;
 
 const Home = () => {
-  const { posts, selectedHashtag, currentPage, goToPage, selectHashtag, clearHashtag } =
-    usePostContext();
+  const {
+    posts,
+    postsLoading,
+    selectedHashtag,
+    currentPage,
+    goToPage,
+    selectHashtag,
+    clearHashtag
+  } = usePostContext();
 
   const { hashtag, pageNumber, searchQuery } = useParams();
   const navigate = useNavigate();
@@ -50,17 +58,24 @@ const Home = () => {
 
   return (
     <div className='mt-1 flex flex-col px-4 pt-1 pb-1 md:p-4'>
-      <div className='sticky top-0 mx-auto flex w-full max-w-[548px] justify-between border-b border-b-gray-200 bg-white pt-2 dark:border-b-gray-200/10 dark:bg-black'>
+      <div className='sticky top-0 mx-auto flex w-full max-w-[548px] justify-between border-b border-b-transparent bg-white pt-2 dark:border-b-gray-200/10 dark:bg-black'>
         <Searchbar />
 
         <ThemeToggle className='ml-4 cursor-pointer' />
       </div>
       <ScrollToTop />
       <div className='mx-auto flex w-full max-w-[548px] flex-col'>
-        {paginatedPosts.map((post) => (
-          <PostCard key={post.id} post={post} onHashtagClick={handleHashtagClick} />
-        ))}
-        {paginatedPosts?.length === 0 && (
+        {postsLoading ? (
+          <>
+            <PostSkeleton />
+            <PostSkeleton />
+          </>
+        ) : (
+          paginatedPosts.map((post) => (
+            <PostCard key={post.id} post={post} onHashtagClick={handleHashtagClick} />
+          ))
+        )}
+        {paginatedPosts?.length === 0 && !postsLoading && (
           <p className='mt-20 text-center text-3xl dark:text-white'>No posts found</p>
         )}
       </div>

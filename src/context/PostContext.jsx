@@ -1,22 +1,28 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState, useRef } from "react";
 
 export const PostContext = createContext();
 
 export const PostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
-  const [likedPosts, setLikedPosts] = useState({});
+  const [likedPosts, setLikedPosts] = useState(() => {
+    return JSON.parse(localStorage.getItem("likedPosts")) || {};
+  });
   const [selectedHashtag, setSelectedHashtag] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchQuery, setSearchQuery] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
     const fetchPosts = async () => {
+      setLoading(true);
       try {
         const response = await fetch("/mockData.json");
         const data = await response.json();
         setPosts(data);
       } catch (error) {
         console.error("Error fetching posts:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -24,11 +30,10 @@ export const PostProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    const storedLikes = JSON.parse(localStorage.getItem("likedPosts")) || {};
-    setLikedPosts(storedLikes);
-  }, []);
-
-  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     localStorage.setItem("likedPosts", JSON.stringify(likedPosts));
   }, [likedPosts]);
 
@@ -40,6 +45,7 @@ export const PostProvider = ({ children }) => {
       } else {
         updatedLikes[postId] = true;
       }
+      localStorage.setItem("likedPosts", JSON.stringify(updatedLikes));
       return updatedLikes;
     });
   };
@@ -68,8 +74,7 @@ export const PostProvider = ({ children }) => {
         selectHashtag,
         clearHashtag,
         goToPage,
-        searchQuery,
-        setSearchQuery
+        postsLoading: loading
       }}>
       {children}
     </PostContext.Provider>
