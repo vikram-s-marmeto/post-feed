@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "profilePic": "https://i.pravatar.cc/50?img=1",
+    "name": "John Doe",
+    "username": "johndoe",
+    "timestamp": "2h ago",
+    "reactions": { "likes": 34 },
+    "content": "Just finished working on a cool project! #react #webdev",
+    "image": "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
+  },
+  {
+    "id": 2,
+    "profilePic": "https://i.pravatar.cc/50?img=2",
+    "name": "Jane Smith",
+    "username": "janesmith",
+    "timestamp": "4h ago",
+    "reactions": { "likes": 6 },
+    "content": "Loving the Shopify ecosystem! #shopify #ecommerce"
+  },
+  {
+    "id": 3,
+    "profilePic": "https://i.pravatar.cc/50?img=3",
+    "name": "Alex Johnson",
+    "username": "alexjohnson",
+    "timestamp": "1d ago",
+    "reactions": { "likes": 46 },
+    "content": "Dark mode should be default everywhere. #ux #design",
+    "image": "https://images.pexels.com/photos/3747133/pexels-photo-3747133.jpeg"
+  },
+  {
+    "id": 4,
+    "profilePic": "https://i.pravatar.cc/50?img=4",
+    "name": "Emily Brown",
+    "username": "emilybrown",
+    "timestamp": "3d ago",
+    "reactions": { "likes": 53 },
+    "content": "Just deployed my first app on Vercel! 🚀 #nextjs #vercel",
+    "image": "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg"
+  },
+  {
+    "id": 5,
+    "profilePic": "https://i.pravatar.cc/50?img=5",
+    "name": "Michael Scott",
+    "username": "michaelscott",
+    "timestamp": "5h ago",
+    "reactions": { "likes": 77 },
+    "content": "The office is getting crazy today! #fun #work"
+  },
+  {
+    "id": 6,
+    "profilePic": "https://i.pravatar.cc/50?img=6",
+    "name": "Sarah Lee",
+    "username": "sarahlee",
+    "timestamp": "1h ago",
+    "reactions": { "likes": 78 },
+    "content": "Learning Tailwind CSS, and it’s amazing! #tailwindcss #frontend",
+    "image": "https://images.pexels.com/photos/2103127/pexels-photo-2103127.jpeg"
+  },
+  {
+    "id": 7,
+    "profilePic": "https://i.pravatar.cc/50?img=7",
+    "name": "David Kim",
+    "username": "davidkim",
+    "timestamp": "30m ago",
+    "reactions": { "likes": 5 },
+    "content": "React hooks are powerful! #react #javascript",
+    "image": "https://images.pexels.com/photos/707915/pexels-photo-707915.jpeg"
+  },
+  {
+    "id": 8,
+    "profilePic": "https://i.pravatar.cc/50?img=8",
+    "name": "Emma Watson",
+    "username": "emmawatson",
+    "timestamp": "3d ago",
+    "reactions": { "likes": 10 },
+    "content": "Excited for my new blog post on UI/UX design! #design #blog",
+    "image": "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg"
+  },
+  {
+    "id": 9,
+    "profilePic": "https://i.pravatar.cc/50?img=9",
+    "name": "Chris Evans",
+    "username": "chrisevans",
+    "timestamp": "6h ago",
+    "reactions": { "likes": 52 },
+    "content": "Working on my side project! #devlife #coding"
+  },
+  {
+    "id": 10,
+    "profilePic": "https://i.pravatar.cc/50?img=10",
+    "name": "Olivia Green",
+    "username": "oliviagreen",
+    "timestamp": "12h ago",
+    "reactions": { "likes": 5 },
+    "content": "Bootstrap vs Tailwind CSS, which one do you prefer? #css #frontend"
+  },
+  {
+    "id": 11,
+    "profilePic": "https://i.pravatar.cc/50?img=11",
+    "name": "Daniel Wilson",
+    "username": "danielwilson",
+    "timestamp": "8h ago",
+    "reactions": { "likes": 45 },
+    "content": "Loving GraphQL! #graphql #api",
+    "image": "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg"
+  },
+  {
+    "id": 12,
+    "profilePic": "https://i.pravatar.cc/50?img=12",
+    "name": "Sophia Martinez",
+    "username": "sophiamartinez",
+    "timestamp": "15h ago",
+    "reactions": { "likes": 10 },
+    "content": "Just built my first mobile app! #reactnative #mobiledev",
+    "image": "https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg"
+  },
+  {
+    "id": 13,
+    "profilePic": "https://i.pravatar.cc/50?img=13",
+    "name": "Liam Brown",
+    "username": "liambrown",
+    "timestamp": "1d ago",
+    "reactions": { "likes": 52 },
+    "content": "Should I learn Vue.js? #vuejs #frontend"
+  },
+  {
+    "id": 14,
+    "profilePic": "https://i.pravatar.cc/50?img=14",
+    "name": "Isabella Clark",
+    "username": "isabellaclark",
+    "timestamp": "2d ago",
+    "reactions": { "likes": 89 },
+    "content": "Loving TypeScript! #typescript #javascript",
+    "image": "https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg"
+  },
+  {
+    "id": 15,
+    "profilePic": "https://i.pravatar.cc/50?img=15",
+    "name": "James Carter",
+    "username": "jamescarter",
+    "timestamp": "3d ago",
+    "reactions": { "likes": 76 },
+    "content": "Just hit 10k followers! #milestone #socialmedia",
+    "image": "https://images.pexels.com/photos/1125273/pexels-photo-1125273.jpeg"
+  },
+  {
+    "id": 16,
+    "profilePic": "https://i.pravatar.cc/50?img=16",
+    "name": "Ava Robinson",
+    "username": "avarobinson",
+    "timestamp": "4d ago",
+    "reactions": { "likes": 41 },
+    "content": "Trying out Firebase for backend. #firebase #backend"
+  },
+  {
+    "id": 17,
+    "profilePic": "https://i.pravatar.cc/50?img=17",
+    "name": "William Harris",
+    "username": "williamharris",
+    "timestamp": "5d ago",
+    "reactions": { "likes": 72 },
+    "content": "JAMstack is the future! #jamstack #webdev",
+    "image": "https://images.pexels.com/photos/3854974/pexels-photo-3854974.jpeg"
+  },
+  {
+    "id": 18,
+    "profilePic": "https://i.pravatar.cc/50?img=18",
+    "name": "Mia Walker",
+    "username": "miawalker",
+    "timestamp": "6d ago",
+    "reactions": { "likes": 56 },
+    "content": "SEO is underrated. #seo #marketing",
+    "image": "https://images.pexels.com/photos/1307698/pexels-photo-1307698.jpeg"
+  },
+  {
+    "id": 19,
+    "profilePic": "https://i.pravatar.cc/50?img=19",
+    "name": "Benjamin Young",
+    "username": "benjaminyoung",
+    "timestamp": "7d ago",
+    "reactions": { "likes": 40 },
+    "content": "Starting my YouTube channel! #contentcreator #video",
+    "image": "https://images.pexels.com/photos/3225517/pexels-photo-3225517.jpeg"
+  },
+  {
+    "id": 20,
+    "profilePic": "https://i.pravatar.cc/50?img=20",
+    "name": "Charlotte Lewis",
+    "username": "charlottelewis",
+    "timestamp": "8d ago",
+    "reactions": { "likes": 3 },
+    "content": "Blockchain is changing the world. #blockchain #crypto"
+  }
+]
